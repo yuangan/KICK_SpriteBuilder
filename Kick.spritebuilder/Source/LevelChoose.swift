@@ -10,15 +10,27 @@ import UIKit
 
 class LevelChoose: CCNode {
     func level1(){
-        CCDirector.sharedDirector().pushScene(self.scene)
         NUMOFLEVEL.level.setLevel(1)
-        let gameplayScene = CCBReader.loadAsScene("Gameplay")
-        CCDirector.sharedDirector().presentScene(gameplayScene, withTransition: CCTransition(fadeWithDuration: 0.5))
+        gotoLevel()
+    }
+    
+    func level2(){
+        NUMOFLEVEL.level.setLevel(2)
+        gotoLevel()
+    }
+    
+    func level3(){
+        NUMOFLEVEL.level.setLevel(3)
+        gotoLevel()
     }
     
     func level8(){
-        CCDirector.sharedDirector().pushScene(self.scene)
         NUMOFLEVEL.level.setLevel(8)
+        gotoLevel()
+    }
+    
+    func gotoLevel(){
+        CCDirector.sharedDirector().pushScene(self.scene)
         let gameplayScene = CCBReader.loadAsScene("Gameplay")
         CCDirector.sharedDirector().presentScene(gameplayScene, withTransition: CCTransition(fadeWithDuration: 0.5))
     }

@@ -15,6 +15,10 @@ class Timer: CCLabelTTF {
         switch(NUMOFLEVEL.level.levelNum){
         case 1:
             self.string = "01:00"
+        case 2:
+            self.string = "01:00"
+        case 3:
+            self.string = "01:00"
         case 8:
             self.string = "03:00"
         default :

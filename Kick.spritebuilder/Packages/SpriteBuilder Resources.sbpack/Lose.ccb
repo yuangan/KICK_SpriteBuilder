@@ -72,7 +72,7 @@
 						<key>value</key>
 						<array>
 							<real>284</real>
-							<real>178</real>
+							<real>192</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -146,8 +146,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -230,8 +228,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>35</real>
+							<real>35</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -264,7 +262,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Return</string>
+							<string></string>
 							<false/>
 						</array>
 					</dict>
@@ -276,7 +274,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Resource/arrow_left_alt1.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -287,7 +285,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Resource/arrow_left_alt1.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -474,6 +472,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -556,8 +556,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>35</real>
+							<real>35</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -590,7 +590,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Replay</string>
+							<string></string>
 							<false/>
 						</array>
 					</dict>
@@ -602,7 +602,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Resource/loop.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -613,7 +613,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Resource/loop.png</string>
 						</array>
 					</dict>
 					<dict>

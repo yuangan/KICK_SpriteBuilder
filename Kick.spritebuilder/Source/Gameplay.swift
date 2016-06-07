@@ -45,7 +45,7 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
     
     func didLoadFromCCB(){
         
-        let level = CCBReader.load("Levels/Level\(NUMOFLEVEL.level.levelNum) copy 1")
+        let level = CCBReader.load("Levels/Level\(NUMOFLEVEL.level.levelNum)")
         levelNode.addChild(level)
         gamePhysicsNode.collisionDelegate = self
         
@@ -100,7 +100,6 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
     
     //与水球碰撞＋水
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, water: Circle_water!, player: Player) -> Bool {
-        print(state)
         if(state&0x10==0){
             count_skill = count_skill+1
             addSkill("Resource/round_water.png")
@@ -169,7 +168,8 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
             )
         //water
         case 0x10:
-            player.contentSize = CGSize(width: 15,height: 15)
+            let scale = CCActionScaleTo.actionWithDuration(0.8, scale: 0.5)
+            player.scale = 0.5
         //wood
         case 0x100:
             player.physicsBody?.mass = 0.3

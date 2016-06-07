@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -50,23 +50,23 @@
 		<key>physicsBody</key>
 		<dict>
 			<key>affectedByGravity</key>
-			<false/>
+			<true/>
 			<key>allowsRotation</key>
 			<true/>
 			<key>bodyShape</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>collisionCategories</key>
 			<array/>
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>player</string>
+			<string></string>
 			<key>cornerRadius</key>
-			<real>13.541901588439941</real>
+			<real>0.0</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
-			<true/>
+			<false/>
 			<key>elasticity</key>
 			<real>0.30000001192092896</real>
 			<key>friction</key>
@@ -74,12 +74,107 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>12.363285064697266</real>
-					<real>12.515140533447266</real>
+					<real>7.789093017578125</real>
+					<real>7.2343902587890625</real>
+				</array>
+				<array>
+					<real>0.191436767578125</real>
+					<real>21.183624267578125</real>
+				</array>
+				<array>
+					<real>0.273468017578125</real>
+					<real>266.73443603515625</real>
+				</array>
+				<array>
+					<real>8.445343017578125</real>
+					<real>282.71099853515625</real>
+				</array>
+				<array>
+					<real>24.210968017578125</real>
+					<real>288.49224853515625</real>
+				</array>
+				<array>
+					<real>61.203155517578125</real>
+					<real>288.44927978515625</real>
+				</array>
+				<array>
+					<real>71.351593017578125</real>
+					<real>280.62896728515625</real>
+				</array>
+				<array>
+					<real>79.480499267578125</real>
+					<real>266.77349853515625</real>
+				</array>
+				<array>
+					<real>79.617218017578125</real>
+					<real>23.667984008789062</real>
+				</array>
+				<array>
+					<real>72.542999267578125</real>
+					<real>8.6445465087890625</real>
+				</array>
+				<array>
+					<real>58.203155517578125</real>
+					<real>1.4765777587890625</real>
+				</array>
+				<array>
+					<real>21.476593017578125</real>
+					<real>0.0351715087890625</real>
 				</array>
 			</array>
 			<key>polygons</key>
-			<array/>
+			<array>
+				<array>
+					<array>
+						<real>21.476593017578125</real>
+						<real>0.0351715087890625</real>
+					</array>
+					<array>
+						<real>58.203155517578125</real>
+						<real>1.4765777587890625</real>
+					</array>
+					<array>
+						<real>72.542999267578125</real>
+						<real>8.6445465087890625</real>
+					</array>
+					<array>
+						<real>79.617218017578125</real>
+						<real>23.667984008789062</real>
+					</array>
+					<array>
+						<real>79.480499267578125</real>
+						<real>266.77349853515625</real>
+					</array>
+					<array>
+						<real>71.351593017578125</real>
+						<real>280.62896728515625</real>
+					</array>
+					<array>
+						<real>61.203155517578125</real>
+						<real>288.44927978515625</real>
+					</array>
+					<array>
+						<real>24.210968017578125</real>
+						<real>288.49224853515625</real>
+					</array>
+					<array>
+						<real>8.445343017578125</real>
+						<real>282.71099853515625</real>
+					</array>
+					<array>
+						<real>0.273468017578125</real>
+						<real>266.73443603515625</real>
+					</array>
+					<array>
+						<real>0.191436767578125</real>
+						<real>21.183624267578125</real>
+					</array>
+					<array>
+						<real>7.789093017578125</real>
+						<real>7.2343902587890625</real>
+					</array>
+				</array>
+			</array>
 		</dict>
 		<key>properties</key>
 		<array>
@@ -89,7 +184,7 @@
 				<key>type</key>
 				<string>StringSimple</string>
 				<key>value</key>
-				<string>player</string>
+				<string></string>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -137,7 +232,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>Resource/roundBlue.png</string>
+					<string>Resource/bar.png</string>
 				</array>
 			</dict>
 			<dict>

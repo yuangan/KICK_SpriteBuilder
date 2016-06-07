@@ -14,6 +14,10 @@ class Goal: CCLabelTTF {
         switch(NUMOFLEVEL.level.levelNum){
         case 1:
             self.setGoal(1)
+        case 2:
+            self.setGoal(13)
+        case 3:
+            self.setGoal(7)
         case 8:
             self.setGoal(1)
         default :

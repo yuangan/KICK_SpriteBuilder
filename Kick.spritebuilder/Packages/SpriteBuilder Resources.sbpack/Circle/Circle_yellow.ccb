@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -60,9 +60,9 @@
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>player</string>
+			<string></string>
 			<key>cornerRadius</key>
-			<real>13.541901588439941</real>
+			<real>13.081330299377441</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -74,8 +74,8 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>12.363285064697266</real>
-					<real>12.515140533447266</real>
+					<real>12.5</real>
+					<real>12.5</real>
 				</array>
 			</array>
 			<key>polygons</key>
@@ -89,7 +89,7 @@
 				<key>type</key>
 				<string>StringSimple</string>
 				<key>value</key>
-				<string>player</string>
+				<string></string>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -137,7 +137,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>Resource/roundBlue.png</string>
+					<string>Resource/roundYello2.png</string>
 				</array>
 			</dict>
 			<dict>
