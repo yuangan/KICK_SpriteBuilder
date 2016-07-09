@@ -154,8 +154,12 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
     
     //与大球碰撞
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, bigBall: BigBall!, wildcard: CCNode!) -> Bool {
+        
         goal.setGoal(goal.getValue()-1)
         bigGoal.setGoal(bigGoal.getValue()-1)
+        let boom = CCBReader.load("BigBallBoom")
+        boom.position = bigBall.position
+        addChild(boom)
         return true
     }
     
@@ -212,6 +216,8 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         let mass = player.physicsBody.mass
         switch(state){
             //fire
+        case 0x0:
+            break;
         case 0x1:
             var v = CGPoint()
             //print(v.dx)
@@ -239,7 +245,15 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
             boom.position = player.position
             addChild(boom)
             EffectOfBoom(player)
-        default:break;
+        case 0x11111:
+            let boom = CCBReader.load("boom")
+            boom.position = player.position
+            addChild(boom)
+            EffectOfAll(player)
+        default:
+            let boom = CCBReader.load("NullBoom")
+            boom.position = player.position
+            addChild(boom)
         }
     }
     
@@ -252,8 +266,18 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
                 let w = child.position.x-player.position.x
                 let h = child.position.y-player.position.y
                 let dis = sqrt(w*w+h*h+1)
-                print(dis)
-                child.physicsBody.applyImpulse(CGPoint(x: w*1000.0/dis,y: h*1000.0/dis))
+                child.physicsBody.applyImpulse(CGPoint(x: w*500.0/dis,y: h*500.0/dis))
+            }
+        }
+    }
+    
+    func EffectOfAll(player:CCNode){
+        let level = levelNode.children.first as! CCNode
+        for tmp_child in level.children{
+            let child = tmp_child as! CCNode
+            if (child.physicsBody.type==CCPhysicsBodyType.Dynamic||child.physicsBody.type==CCPhysicsBodyType.Static){
+
+                child.physicsBody.elasticity = 1.0
             }
         }
     }
