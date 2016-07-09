@@ -9,17 +9,24 @@
 import UIKit
 
 class Win: CCNode {
+    func didLoadFromCCB(){
+        OALSimpleAudio.sharedInstance().playEffect("Resource/win.wav")
+    }
+    
     func returnToLevelChoose(){
+        OALSimpleAudio.sharedInstance().stopAllEffects()
         let trans = CCTransition(fadeWithDuration: 0.5)
         CCDirector.sharedDirector().popSceneWithTransition(trans)
     }
     
     func replay(){
+        OALSimpleAudio.sharedInstance().stopAllEffects()
         let gameplayScene = CCBReader.loadAsScene("Gameplay")
         CCDirector.sharedDirector().presentScene(gameplayScene, withTransition: CCTransition(fadeWithDuration: 0.5))
     }
 
     func nextLevel(){
+        OALSimpleAudio.sharedInstance().stopAllEffects()
         CCDirector.sharedDirector().popScene()
         CCDirector.sharedDirector().pushScene(self.scene)
         //todo:move to next level

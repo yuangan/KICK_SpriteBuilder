@@ -9,12 +9,17 @@
 import UIKit
 
 class Lose: CCNode {
+    func didLoadFromCCB(){
+        OALSimpleAudio.sharedInstance().playEffect("Resource/failed.wav")
+    }
     func returnToLevelChoose(){
+        OALSimpleAudio.sharedInstance().stopAllEffects()
         let trans = CCTransition(fadeWithDuration: 0.5)
         CCDirector.sharedDirector().popSceneWithTransition(trans)
     }
 
     func replay(){
+        OALSimpleAudio.sharedInstance().stopAllEffects()
         let gameplayScene = CCBReader.loadAsScene("Gameplay")
         CCDirector.sharedDirector().presentScene(gameplayScene, withTransition: CCTransition(fadeWithDuration: 0.5))
     }

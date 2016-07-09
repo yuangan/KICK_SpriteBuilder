@@ -24,7 +24,9 @@ func normalize(velocity:CGPoint)->CGPoint{
 
 class Gameplay: CCNode,CCPhysicsCollisionDelegate {
     internal var NumOfLevel: Int!
-
+    //music
+    let audio = OALSimpleAudio.sharedInstance()
+    
     weak var timer:Timer!
     weak var goal:Goal!
     weak var levelNode: CCNode!
@@ -54,6 +56,11 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         userInteractionEnabled = true
         //移动阻力
         gamePhysicsNode.space.damping = 0.65
+        
+    }
+    
+    override func onEnterTransitionDidFinish() {
+        audio.playEffect("Resource/background.wav",loop: true)
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
@@ -154,7 +161,7 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
     
     //与大球碰撞
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, bigBall: BigBall!, wildcard: CCNode!) -> Bool {
-        
+        audio.playEffect("Resource/kick_ball.wav")
         goal.setGoal(goal.getValue()-1)
         bigGoal.setGoal(bigGoal.getValue()-1)
         let boom = CCBReader.load("BigBallBoom")
@@ -197,17 +204,21 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
     }
     
     func pause(){
+        audio.stopAllEffects()
         CCDirector.sharedDirector().pushScene(self.scene)
         let stop = CCBReader.loadAsScene("Stop")
         CCDirector.sharedDirector().presentScene(stop, withTransition: CCTransition(crossFadeWithDuration: 0.5))
     }
     
     func lose(){
+        audio.stopAllEffects()
         let lose = CCBReader.loadAsScene("Lose")
         CCDirector.sharedDirector().presentScene(lose, withTransition: CCTransition(crossFadeWithDuration: 0.5))
     }
     
     func win(){
+        audio.stopAllEffects()
+
         let win = CCBReader.loadAsScene("Win")
         CCDirector.sharedDirector().presentScene(win, withTransition: CCTransition(crossFadeWithDuration: 0.5))
     }
@@ -280,10 +291,12 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
                 child.physicsBody.elasticity = 1.0
             }
         }
+        gamePhysicsNode.space.damping = 0.01
     }
     
     func gameOver(){
         if goal.getValue()==0{
+            
             win()
         }
         
