@@ -1,5 +1,5 @@
 //
-//  Circle_wood.swift
+//  BigBall.swift
 //  Kick
 //
 //  Created by nju on 16/7/9.
@@ -8,6 +8,6 @@
 
 import UIKit
 //后面做碰撞判断时需要这个类
-class Circle_wood: CCSprite {
+class BigBall: CCSprite {
     
 }

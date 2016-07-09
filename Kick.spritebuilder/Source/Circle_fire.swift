@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//后面做碰撞判断时需要这个类
 class Circle_fire: CCSprite {
 
 }

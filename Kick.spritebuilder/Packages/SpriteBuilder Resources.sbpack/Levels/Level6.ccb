@@ -856,7 +856,7 @@
 						<key>value</key>
 						<array>
 							<real>287.11572265625</real>
-							<real>271.95004272460938</real>
+							<real>268.88418579101562</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -946,8 +946,6 @@
 						<string>Circle/Circle_wood.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1222,6 +1220,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

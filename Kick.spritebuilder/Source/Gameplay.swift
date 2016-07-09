@@ -29,6 +29,7 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
     weak var goal:Goal!
     weak var levelNode: CCNode!
     weak var gamePhysicsNode: CCPhysicsNode!
+    weak var bigGoal:BigGoal!
     weak var skill1:CCSprite!
     weak var skill2:CCSprite!
     weak var skill3:CCSprite!
@@ -52,7 +53,7 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         //gamePhysicsNode.debugDraw = true
         userInteractionEnabled = true
         //移动阻力
-        gamePhysicsNode.space.damping = 0.7
+        gamePhysicsNode.space.damping = 0.65
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
@@ -151,6 +152,13 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         return true
     }
     
+    //与大球碰撞
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, bigBall: BigBall!, wildcard: CCNode!) -> Bool {
+        goal.setGoal(goal.getValue()-1)
+        bigGoal.setGoal(bigGoal.getValue()-1)
+        return true
+    }
+    
     //与物体碰撞
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, player: Player, wildcard: CCNode!) -> Bool {
         let Collition = CCBReader.load("Collision")
@@ -240,7 +248,12 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         for tmp_child in level.children{
             let child = tmp_child as! CCNode
             if (child.physicsBody.type==CCPhysicsBodyType.Dynamic){
-                child.physicsBody.applyImpulse(CGPoint(x: child.position.x-player.position.x,y:child.position.y-player.position.y))
+                //距离
+                let w = child.position.x-player.position.x
+                let h = child.position.y-player.position.y
+                let dis = sqrt(w*w+h*h+1)
+                print(dis)
+                child.physicsBody.applyImpulse(CGPoint(x: w*1000.0/dis,y: h*1000.0/dis))
             }
         }
     }
