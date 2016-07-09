@@ -40,7 +40,7 @@
 		<key>children</key>
 		<array/>
 		<key>customClass</key>
-		<string>Circle_land</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -54,32 +54,219 @@
 			<key>allowsRotation</key>
 			<true/>
 			<key>bodyShape</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>collisionCategories</key>
 			<array/>
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>land</string>
+			<string></string>
 			<key>cornerRadius</key>
-			<real>12.934548377990723</real>
+			<real>0.0</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
-			<true/>
+			<false/>
 			<key>elasticity</key>
-			<real>0.5</real>
+			<real>0.30000001192092896</real>
 			<key>friction</key>
-			<real>0.69999998807907104</real>
+			<real>0.30000001192092896</real>
 			<key>points</key>
 			<array>
 				<array>
-					<real>12.5</real>
-					<real>12.5</real>
+					<real>0.45939111709594727</real>
+					<real>87.046722412109375</real>
+				</array>
+				<array>
+					<real>-0.11673802137374878</real>
+					<real>114.39794158935547</real>
+				</array>
+				<array>
+					<real>23.49827766418457</real>
+					<real>112.16877746582031</real>
+				</array>
+				<array>
+					<real>49.033199310302734</real>
+					<real>103.52056121826172</real>
+				</array>
+				<array>
+					<real>72.20709228515625</real>
+					<real>89.787651062011719</real>
+				</array>
+				<array>
+					<real>89.67620849609375</real>
+					<real>71.732994079589844</real>
+				</array>
+				<array>
+					<real>101.23646545410156</real>
+					<real>54.460109710693359</real>
+				</array>
+				<array>
+					<real>111.45608520507812</real>
+					<real>28.837278366088867</real>
+				</array>
+				<array>
+					<real>115.34613800048828</real>
+					<real>-0.24389459192752838</real>
+				</array>
+				<array>
+					<real>87.261802673339844</real>
+					<real>-0.13871569931507111</real>
+				</array>
+				<array>
+					<real>85.864646911621094</real>
+					<real>13.97252368927002</real>
+				</array>
+				<array>
+					<real>81.6370849609375</real>
+					<real>31.246967315673828</real>
+				</array>
+				<array>
+					<real>73.133293151855469</real>
+					<real>46.912349700927734</real>
+				</array>
+				<array>
+					<real>59.648418426513672</real>
+					<real>63.627948760986328</real>
+				</array>
+				<array>
+					<real>43.039573669433594</real>
+					<real>75.084587097167969</real>
+				</array>
+				<array>
+					<real>22.674114227294922</real>
+					<real>84.308929443359375</real>
 				</array>
 			</array>
 			<key>polygons</key>
-			<array/>
+			<array>
+				<array>
+					<array>
+						<real>23.49827766418457</real>
+						<real>112.16877746582031</real>
+					</array>
+					<array>
+						<real>-0.11673802137374878</real>
+						<real>114.39794158935547</real>
+					</array>
+					<array>
+						<real>0.45939111709594727</real>
+						<real>87.046722412109375</real>
+					</array>
+					<array>
+						<real>22.674114227294922</real>
+						<real>84.308929443359375</real>
+					</array>
+				</array>
+				<array>
+					<array>
+						<real>49.033199310302734</real>
+						<real>103.52056121826172</real>
+					</array>
+					<array>
+						<real>23.49827766418457</real>
+						<real>112.16877746582031</real>
+					</array>
+					<array>
+						<real>22.674114227294922</real>
+						<real>84.308929443359375</real>
+					</array>
+					<array>
+						<real>43.039573669433594</real>
+						<real>75.084587097167969</real>
+					</array>
+				</array>
+				<array>
+					<array>
+						<real>72.20709228515625</real>
+						<real>89.787651062011719</real>
+					</array>
+					<array>
+						<real>49.033199310302734</real>
+						<real>103.52056121826172</real>
+					</array>
+					<array>
+						<real>43.039573669433594</real>
+						<real>75.084587097167969</real>
+					</array>
+					<array>
+						<real>59.648418426513672</real>
+						<real>63.627948760986328</real>
+					</array>
+				</array>
+				<array>
+					<array>
+						<real>101.23646545410156</real>
+						<real>54.460109710693359</real>
+					</array>
+					<array>
+						<real>89.67620849609375</real>
+						<real>71.732994079589844</real>
+					</array>
+					<array>
+						<real>72.20709228515625</real>
+						<real>89.787651062011719</real>
+					</array>
+					<array>
+						<real>59.648418426513672</real>
+						<real>63.627948760986328</real>
+					</array>
+					<array>
+						<real>73.133293151855469</real>
+						<real>46.912349700927734</real>
+					</array>
+				</array>
+				<array>
+					<array>
+						<real>111.45608520507812</real>
+						<real>28.837278366088867</real>
+					</array>
+					<array>
+						<real>101.23646545410156</real>
+						<real>54.460109710693359</real>
+					</array>
+					<array>
+						<real>73.133293151855469</real>
+						<real>46.912349700927734</real>
+					</array>
+					<array>
+						<real>81.6370849609375</real>
+						<real>31.246967315673828</real>
+					</array>
+				</array>
+				<array>
+					<array>
+						<real>111.45608520507812</real>
+						<real>28.837278366088867</real>
+					</array>
+					<array>
+						<real>81.6370849609375</real>
+						<real>31.246967315673828</real>
+					</array>
+					<array>
+						<real>85.864646911621094</real>
+						<real>13.97252368927002</real>
+					</array>
+				</array>
+				<array>
+					<array>
+						<real>85.864646911621094</real>
+						<real>13.97252368927002</real>
+					</array>
+					<array>
+						<real>87.261802673339844</real>
+						<real>-0.13871569931507111</real>
+					</array>
+					<array>
+						<real>115.34613800048828</real>
+						<real>-0.24389459192752838</real>
+					</array>
+					<array>
+						<real>111.45608520507812</real>
+						<real>28.837278366088867</real>
+					</array>
+				</array>
+			</array>
 		</dict>
 		<key>properties</key>
 		<array>
@@ -137,7 +324,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>Resource/round_land.png</string>
+					<string>Resource/QC.png</string>
 				</array>
 			</dict>
 			<dict>

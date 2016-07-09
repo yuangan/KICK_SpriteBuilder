@@ -1199,7 +1199,7 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>level7</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -1525,7 +1525,7 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>level4</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -1851,7 +1851,7 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>level5</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -2177,7 +2177,7 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>level6</string>
 							<integer>1</integer>
 						</array>
 					</dict>

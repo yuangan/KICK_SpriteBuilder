@@ -24,6 +24,26 @@ class LevelChoose: CCNode {
         gotoLevel()
     }
     
+    func level4(){
+        NUMOFLEVEL.level.setLevel(4)
+        gotoLevel()
+    }
+    
+    func level5(){
+        NUMOFLEVEL.level.setLevel(5)
+        gotoLevel()
+    }
+    
+    func level6(){
+        NUMOFLEVEL.level.setLevel(6)
+        gotoLevel()
+    }
+    
+    func level7(){
+        NUMOFLEVEL.level.setLevel(7)
+        gotoLevel()
+    }
+    
     func level8(){
         NUMOFLEVEL.level.setLevel(8)
         gotoLevel()

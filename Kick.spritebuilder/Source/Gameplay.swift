@@ -49,7 +49,7 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         levelNode.addChild(level)
         gamePhysicsNode.collisionDelegate = self
         
-        gamePhysicsNode.debugDraw = true
+        //gamePhysicsNode.debugDraw = true
         userInteractionEnabled = true
         //移动阻力
         gamePhysicsNode.space.damping = 0.7
@@ -109,6 +109,26 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         return true
     }
     
+    //与土球碰撞＋土
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, land: Circle_land!, player: Player) -> Bool {
+        if(state&0x1000==0){
+            count_skill = count_skill+1
+            addSkill("Resource/round_land.png")
+            state = state|0x1000
+        }
+        return true
+    }
+    
+    //与木球碰撞＋木
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, wood: Circle_wood!, player: Player) -> Bool {
+        if(state&0x100==0){
+            count_skill = count_skill+1
+            addSkill("Resource/round_wood.png")
+            state = state|0x100
+        }
+        return true
+    }
+    
     //与物体碰撞
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, player: Player, wildcard: CCNode!) -> Bool {
         let Collition = CCBReader.load("Collision")
@@ -160,7 +180,9 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
     }
     
     func changePlayer(player:CCNode){
+        let mass = player.physicsBody.mass
         switch(state){
+            //fire
         case 0x1:
             var v = CGPoint()
             //print(v.dx)
@@ -169,19 +191,20 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
             )
         //water
         case 0x10:
-            //let scale = CCActionScaleTo.actionWithDuration(0.8, scale: 0.5)
             player.mySetScale(0.5)
+            player.physicsBody.mass = mass
             //player.physicsBody.
         //wood
         case 0x100:
             player.physicsBody?.mass = 0.3
-           
+        //
         case 0x1000:
-            let tempMass = player.physicsBody?.mass
-            player.contentSize = CGSize(width: 50, height: 50)
-            player.physicsBody?.mass = tempMass!
+            player.mySetScale(2.0)
+            player.physicsBody?.mass = mass
+        //gold
         case 0x10000:
             player.physicsBody?.mass = 3.0
+        //null
         default:break
         }
     }

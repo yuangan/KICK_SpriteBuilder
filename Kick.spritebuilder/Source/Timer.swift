@@ -19,6 +19,14 @@ class Timer: CCLabelTTF {
             self.string = "01:00"
         case 3:
             self.string = "01:00"
+        case 4:
+            self.string = "01:00"
+        case 5:
+            self.string = "01:00"
+        case 6:
+            self.string = "01:00"
+        case 7:
+            self.string = "02:00"
         case 8:
             self.string = "03:00"
         default :
