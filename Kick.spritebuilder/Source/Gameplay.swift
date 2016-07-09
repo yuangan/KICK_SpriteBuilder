@@ -49,9 +49,10 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         levelNode.addChild(level)
         gamePhysicsNode.collisionDelegate = self
         
-        //gamePhysicsNode.debugDraw = true
+        gamePhysicsNode.debugDraw = true
         userInteractionEnabled = true
-        gamePhysicsNode.space.damping = 0.8
+        //移动阻力
+        gamePhysicsNode.space.damping = 0.7
     }
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
@@ -164,16 +165,17 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
             var v = CGPoint()
             //print(v.dx)
             v = normalize((player.physicsBody?.velocity)!)
-            player.physicsBody?.applyImpulse(CGPoint(x: v.x*80*(player.physicsBody?.mass)!,y: v.y*80*(player.physicsBody?.mass)!)
+            player.physicsBody?.applyImpulse(CGPoint(x: v.x*200*(player.physicsBody?.mass)!,y: v.y*200*(player.physicsBody?.mass)!)
             )
         //water
         case 0x10:
-            let scale = CCActionScaleTo.actionWithDuration(0.8, scale: 0.5)
+            //let scale = CCActionScaleTo.actionWithDuration(0.8, scale: 0.5)
             player.scale = 0.5
+            //player.physicsBody.
         //wood
         case 0x100:
             player.physicsBody?.mass = 0.3
-            
+            player.physicsBody = CCPhysicsBody(circleOfRadius: player.contentSize.width/2, andCenter: player.position)
         case 0x1000:
             let tempMass = player.physicsBody?.mass
             player.contentSize = CGSize(width: 50, height: 50)

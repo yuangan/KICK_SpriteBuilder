@@ -21,6 +21,10 @@ class Win: CCNode {
 
     func nextLevel(){
         CCDirector.sharedDirector().popScene()
+        CCDirector.sharedDirector().pushScene(self.scene)
         //todo:move to next level
+        NUMOFLEVEL.level.setLevel(NUMOFLEVEL.level.levelNum+1)
+        let gameplayScene = CCBReader.loadAsScene("Gameplay")
+        CCDirector.sharedDirector().presentScene(gameplayScene, withTransition: CCTransition(fadeWithDuration: 0.5))
     }
 }
