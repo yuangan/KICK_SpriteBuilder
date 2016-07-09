@@ -48,6 +48,7 @@
 		7C15E2831D30E4AE00E5F658 /* Circle_land.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15E2821D30E4AE00E5F658 /* Circle_land.swift */; };
 		7C15E2861D30EAFF00E5F658 /* Circle_wood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15E2851D30EAFF00E5F658 /* Circle_wood.swift */; };
 		7C15E2881D30ED4300E5F658 /* Circle_gold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15E2871D30ED4300E5F658 /* Circle_gold.swift */; };
+		7C15E28A1D30F37000E5F658 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15E2891D30F37000E5F658 /* Bar.swift */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		927F61A5196C771E000F43EF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3517B978D7009739AE /* OpenAL.framework */; };
 		927F61A9196C771E000F43EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
@@ -195,6 +196,7 @@
 		7C15E2821D30E4AE00E5F658 /* Circle_land.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle_land.swift; sourceTree = "<group>"; };
 		7C15E2851D30EAFF00E5F658 /* Circle_wood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle_wood.swift; sourceTree = "<group>"; };
 		7C15E2871D30ED4300E5F658 /* Circle_gold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle_gold.swift; sourceTree = "<group>"; };
+		7C15E2891D30F37000E5F658 /* Bar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		927F61BF196C771E000F43EF /* Kick Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kick Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
@@ -479,14 +481,15 @@
 			children = (
 				EC4FDAEF1D01424E00B7C9E9 /* Level8.swift */,
 				ECD260C11CF93EAC00B86496 /* Timer.swift */,
+				ECD260CD1CF95EFF00B86496 /* Goal.swift */,
 				EC5660CA1CFD9DE500507B06 /* Stop.swift */,
+				7C15E2891D30F37000E5F658 /* Bar.swift */,
 				7C15E2851D30EAFF00E5F658 /* Circle_wood.swift */,
 				7C15E2871D30ED4300E5F658 /* Circle_gold.swift */,
 				ECF21B431CFB1090004CF07B /* Circle_fire.swift */,
 				EC4FDAF11D0191A100B7C9E9 /* Circle_water.swift */,
 				7C15E2821D30E4AE00E5F658 /* Circle_land.swift */,
 				ECD260C51CF9455900B86496 /* NUMOFLEVEL.swift */,
-				ECD260CD1CF95EFF00B86496 /* Goal.swift */,
 				7A40362019DDEF0D007B6E8F /* Platforms */,
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
 				D352B48019EC608A00829775 /* MetalShaders */,
@@ -893,6 +896,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C15E28A1D30F37000E5F658 /* Bar.swift in Sources */,
 				ECD260BF1CF93E9C00B86496 /* Gameplay.swift in Sources */,
 				EC5660CB1CFD9DE500507B06 /* Stop.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,

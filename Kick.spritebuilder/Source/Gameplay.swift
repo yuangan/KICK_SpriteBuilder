@@ -129,6 +129,28 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         return true
     }
     
+    //与金球碰撞＋金
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, gold: Circle_wood!, player: Player) -> Bool {
+        if(state&0x10000==0){
+            count_skill = count_skill+1
+            addSkill("Resource/round_gold.png")
+            state = state|0x10000
+        }
+        return true
+    }
+    
+    //与木条碰撞
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, bar: Bar!, player: Player) -> Bool {
+        if(player.physicsBody.mass>3.0){
+            bar.removeFromParent()
+        }
+        else {
+            bar.physicsBody.type = .Static
+        }
+        
+        return true
+    }
+    
     //与物体碰撞
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, player: Player, wildcard: CCNode!) -> Bool {
         let Collition = CCBReader.load("Collision")
@@ -154,7 +176,6 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
             if (child.position.x < 0||child.position.x > self.boundingBox().width||child.position.y < 0||child.position.y>self.boundingBox().height){
                 child.removeFromParent()
 
-                //if child.name.compare("player") != NSComparisonResult.OrderedSame{
                 if !child.isKindOfClass(Player){
                     goal.setGoal(goal.getValue()-1)
                 }
@@ -197,15 +218,30 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         //wood
         case 0x100:
             player.physicsBody?.mass = 0.3
-        //
+        //land
         case 0x1000:
             player.mySetScale(2.0)
             player.physicsBody?.mass = mass
         //gold
         case 0x10000:
-            player.physicsBody?.mass = 3.0
+            player.physicsBody?.mass = 3.1
         //null
-        default:break
+        case 0x01111:
+            let boom = CCBReader.load("boom")
+            boom.position = player.position
+            addChild(boom)
+            EffectOfBoom(player)
+        default:break;
+        }
+    }
+    
+    func EffectOfBoom(player:CCNode){
+        let level = levelNode.children.first as! CCNode
+        for tmp_child in level.children{
+            let child = tmp_child as! CCNode
+            if (child.physicsBody.type==CCPhysicsBodyType.Dynamic){
+                child.physicsBody.applyImpulse(CGPoint(x: child.position.x-player.position.x,y:child.position.y-player.position.y))
+            }
         }
     }
     

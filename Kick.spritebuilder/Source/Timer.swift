@@ -20,11 +20,11 @@ class Timer: CCLabelTTF {
         case 3:
             self.string = "01:00"
         case 4:
-            self.string = "01:00"
+            self.string = "00:50"
         case 5:
-            self.string = "01:00"
+            self.string = "01:30"
         case 6:
-            self.string = "01:00"
+            self.string = "00:15"
         case 7:
             self.string = "02:00"
         case 8:

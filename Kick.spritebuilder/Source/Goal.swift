@@ -21,9 +21,9 @@ class Goal: CCLabelTTF {
         case 4:
             self.setGoal(7)
         case 5:
-            self.setGoal(2)
+            self.setGoal(8)
         case 6:
-            self.setGoal(2)
+            self.setGoal(4)
         case 7:
             self.setGoal(2)
         case 8:
