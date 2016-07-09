@@ -171,11 +171,14 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         case 0x10:
             //let scale = CCActionScaleTo.actionWithDuration(0.8, scale: 0.5)
             player.scale = 0.5
+            player.physicsBody = CCPhysicsBody(circleOfRadius: player.contentSize.width/2, andCenter: player.position)
+            player.physicsBody.affectedByGravity = false
+            player.physicsBody.type = .Dynamic
             //player.physicsBody.
         //wood
         case 0x100:
             player.physicsBody?.mass = 0.3
-            player.physicsBody = CCPhysicsBody(circleOfRadius: player.contentSize.width/2, andCenter: player.position)
+           
         case 0x1000:
             let tempMass = player.physicsBody?.mass
             player.contentSize = CGSize(width: 50, height: 50)
