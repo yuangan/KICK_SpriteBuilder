@@ -230,6 +230,7 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         case 0x0:
             break;
         case 0x1:
+            audio.playEffect("Resource/fire.wav")
             var v = CGPoint()
             //print(v.dx)
             v = normalize((player.physicsBody?.velocity)!)
@@ -237,18 +238,22 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
             )
         //water
         case 0x10:
+            audio.playEffect("Resource/change_size.wav")
             player.mySetScale(0.5)
             player.physicsBody.mass = mass
             //player.physicsBody.
         //wood
         case 0x100:
+            audio.playEffect("Resource/change_size.wav")
             player.physicsBody?.mass = 0.3
         //land
         case 0x1000:
+            audio.playEffect("Resource/change_size.wav")
             player.mySetScale(2.0)
             player.physicsBody?.mass = mass
         //gold
         case 0x10000:
+            audio.playEffect("Resource/change_size.wav")
             player.physicsBody?.mass = 3.1
         //null
         case 0x01111:
@@ -262,6 +267,7 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
             addChild(boom)
             EffectOfAll(player)
         default:
+            audio.playEffect("Resource/magic")
             let boom = CCBReader.load("NullBoom")
             boom.position = player.position
             addChild(boom)
