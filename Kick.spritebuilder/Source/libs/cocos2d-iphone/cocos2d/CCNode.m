@@ -609,8 +609,20 @@ TransformPointAsVector(CGPoint p, CGAffineTransform t)
 
 -(void) setScale:(float) s
 {
-	_scaleX = _scaleY = s;
-	_isTransformDirty = _isInverseDirty = YES;
+    _scaleX = _scaleY = s;
+    _isTransformDirty = _isInverseDirty = YES;
+}
+
+-(void) mySetScale:(float) s
+{
+    _scaleX = _scaleY = s;
+    _isTransformDirty = _isInverseDirty = YES;
+    if (self.physicsBody) {
+        CCPhysicsShape* shapeList = (CCPhysicsShape *)self.physicsBody.shapeList;
+        for(CCPhysicsShape *shape = shapeList; shape; shape=shape.next) {
+            [shape rescaleShape: [self nonRigidTransform]];
+        }
+    }
 }
 
 - (void) setZOrder:(NSInteger)zOrder

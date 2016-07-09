@@ -170,10 +170,7 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         //water
         case 0x10:
             //let scale = CCActionScaleTo.actionWithDuration(0.8, scale: 0.5)
-            player.scale = 0.5
-            player.physicsBody = CCPhysicsBody(circleOfRadius: player.contentSize.width/2, andCenter: player.position)
-            player.physicsBody.affectedByGravity = false
-            player.physicsBody.type = .Dynamic
+            player.mySetScale(0.5)
             //player.physicsBody.
         //wood
         case 0x100:

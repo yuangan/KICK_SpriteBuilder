@@ -382,6 +382,12 @@
  @see scaleInPoints */
 @property (nonatomic,assign) CCScaleType scaleType;
 
+/**
+ * @param s.
+ */
+
+-(void) mySetScale: (float) s;
+
 /// -----------------------------------------------------------------------
 /// @name Size
 /// -----------------------------------------------------------------------
@@ -478,6 +484,8 @@
   @see name
  */
 -(void) addChild: (CCNode*)node z:(NSInteger)z name:(NSString*)name;
+
+
 
 /** Removes the node from its parent node. Will stop the node's scheduled selectors/blocks and actions.
  @note It is typically more efficient to change a node's visible status rather than remove + addChild: if all you need
@@ -709,6 +717,7 @@
  @see CCAnimationManager
  */
 @property (nonatomic, readonly) CCAnimationManager * animationManager;
+
 
 
 /// -----------------------------------------------------------------------
