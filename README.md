@@ -25,4 +25,3 @@
 想体验音效只有下载下来玩了:)
 
 PS：高清无码大视频：http://www.tudou.com/programs/view/8QuG6el8iHQ/
-    标清转码小视频：http://www.tudou.com/programs/view/8lgg6y1DKc4/
