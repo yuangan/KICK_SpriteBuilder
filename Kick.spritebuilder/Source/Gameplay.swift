@@ -150,12 +150,12 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
     //与木条碰撞
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, bar: Bar!, player: Player) -> Bool {
         if(player.physicsBody.mass>3.0){
+            audio.playEffect("Resource/bar_remove.wav")
             bar.removeFromParent()
         }
-        else {
-            bar.physicsBody.type = .Static
+        else{
+            audio.playEffect("Resource/kick_bar.wav")
         }
-        
         return true
     }
     
@@ -172,6 +172,11 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
     
     //与物体碰撞
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, player: Player, wildcard: CCNode!) -> Bool {
+        if wildcard != nil{
+            if (!wildcard.isKindOfClass(Bar))&&(!wildcard.isKindOfClass(BigBall)){
+                audio.playEffect("Resource/kick_little_ball.wav")
+            }
+        }
         let Collition = CCBReader.load("Collision")
         Collition.position = pair.contacts.points.0.pointA
         addChild(Collition)
@@ -257,17 +262,19 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
             player.physicsBody?.mass = 3.1
         //null
         case 0x01111:
+            audio.playEffect("Resource/fire.wav")
             let boom = CCBReader.load("boom")
             boom.position = player.position
             addChild(boom)
             EffectOfBoom(player)
         case 0x11111:
+            audio.playEffect("Resource/fire.wav")
             let boom = CCBReader.load("boom")
             boom.position = player.position
             addChild(boom)
             EffectOfAll(player)
         default:
-            audio.playEffect("Resource/magic")
+            audio.playEffect("Resource/skill_null.wav")
             let boom = CCBReader.load("NullBoom")
             boom.position = player.position
             addChild(boom)
@@ -293,11 +300,10 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         for tmp_child in level.children{
             let child = tmp_child as! CCNode
             if (child.physicsBody.type==CCPhysicsBodyType.Dynamic||child.physicsBody.type==CCPhysicsBodyType.Static){
-
                 child.physicsBody.elasticity = 1.0
             }
         }
-        gamePhysicsNode.space.damping = 0.01
+        gamePhysicsNode.space.damping = 0.5
     }
     
     func gameOver(){

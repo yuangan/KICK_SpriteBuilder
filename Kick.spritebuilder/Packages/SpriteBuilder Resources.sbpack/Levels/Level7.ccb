@@ -100,8 +100,6 @@
 						<string>Circle/BigBall.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -957,8 +955,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>43.896831512451172</real>
-							<real>142.93983459472656</real>
+							<real>73.789138793945312</real>
+							<real>155.43983459472656</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -986,6 +984,8 @@
 						<string>player.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

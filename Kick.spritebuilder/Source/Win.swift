@@ -27,11 +27,17 @@ class Win: CCNode {
 
     func nextLevel(){
         OALSimpleAudio.sharedInstance().stopAllEffects()
-        CCDirector.sharedDirector().popScene()
-        CCDirector.sharedDirector().pushScene(self.scene)
-        //todo:move to next level
-        NUMOFLEVEL.level.setLevel(NUMOFLEVEL.level.levelNum+1)
-        let gameplayScene = CCBReader.loadAsScene("Gameplay")
-        CCDirector.sharedDirector().presentScene(gameplayScene, withTransition: CCTransition(fadeWithDuration: 0.5))
+        if(NUMOFLEVEL.level.levelNum != 8){
+            CCDirector.sharedDirector().popScene()
+            CCDirector.sharedDirector().pushScene(self.scene)
+            //todo:move to next level
+            NUMOFLEVEL.level.setLevel(NUMOFLEVEL.level.levelNum+1)
+            let gameplayScene = CCBReader.loadAsScene("Gameplay")
+            CCDirector.sharedDirector().presentScene(gameplayScene, withTransition: CCTransition(fadeWithDuration: 0.5))
+        }
+        else{
+            returnToLevelChoose()
+        }
+        
     }
 }
