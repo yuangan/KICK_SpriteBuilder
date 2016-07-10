@@ -22,6 +22,7 @@
 
 已录制通关视频，音乐不知怎么录不进去。游戏节奏太慢为舍友所诟病，但开启加速看的话，还是可以的（笑）。
 
-想体验音效只有下载来玩了:)
+想体验音效只有下载下来玩了:)
 
-PS：高清无码大视频要200多M，只能传个小视频凑合着看了。视频地址：http://www.tudou.com/programs/view/8lgg6y1DKc4/
+PS：高清无码大视频：http://www.tudou.com/programs/view/8QuG6el8iHQ/
+    标清转码小视频：http://www.tudou.com/programs/view/8lgg6y1DKc4/
