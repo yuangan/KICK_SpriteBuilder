@@ -9,47 +9,62 @@
 import UIKit
 
 class LevelChoose: CCNode {
+    
+    override func onEnterTransitionDidFinish() {
+        OALSimpleAudio.sharedInstance().playEffect("Resource/start_background.wav",loop: true)
+    }
+    
     func level1(){
+
         NUMOFLEVEL.level.setLevel(1)
         gotoLevel()
     }
     
     func level2(){
+
         NUMOFLEVEL.level.setLevel(2)
         gotoLevel()
     }
     
     func level3(){
+
         NUMOFLEVEL.level.setLevel(3)
         gotoLevel()
     }
     
     func level4(){
+
         NUMOFLEVEL.level.setLevel(4)
         gotoLevel()
     }
     
     func level5(){
+
         NUMOFLEVEL.level.setLevel(5)
         gotoLevel()
     }
     
     func level6(){
+
         NUMOFLEVEL.level.setLevel(6)
         gotoLevel()
     }
     
     func level7(){
+
         NUMOFLEVEL.level.setLevel(7)
         gotoLevel()
     }
     
     func level8(){
+        
         NUMOFLEVEL.level.setLevel(8)
         gotoLevel()
     }
     
     func gotoLevel(){
+        OALSimpleAudio.sharedInstance().stopAllEffects();
+        OALSimpleAudio.sharedInstance().playEffect("Resource/button.wav")
         CCDirector.sharedDirector().pushScene(self.scene)
         let gameplayScene = CCBReader.loadAsScene("Gameplay")
         CCDirector.sharedDirector().presentScene(gameplayScene, withTransition: CCTransition(fadeWithDuration: 0.5))

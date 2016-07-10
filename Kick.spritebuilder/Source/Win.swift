@@ -15,18 +15,21 @@ class Win: CCNode {
     
     func returnToLevelChoose(){
         OALSimpleAudio.sharedInstance().stopAllEffects()
+        OALSimpleAudio.sharedInstance().playEffect("Resource/button.wav")
         let trans = CCTransition(fadeWithDuration: 0.5)
         CCDirector.sharedDirector().popSceneWithTransition(trans)
     }
     
     func replay(){
         OALSimpleAudio.sharedInstance().stopAllEffects()
+        OALSimpleAudio.sharedInstance().playEffect("Resource/button.wav")
         let gameplayScene = CCBReader.loadAsScene("Gameplay")
         CCDirector.sharedDirector().presentScene(gameplayScene, withTransition: CCTransition(fadeWithDuration: 0.5))
     }
 
     func nextLevel(){
         OALSimpleAudio.sharedInstance().stopAllEffects()
+        OALSimpleAudio.sharedInstance().playEffect("Resource/button.wav")
         if(NUMOFLEVEL.level.levelNum != 8){
             CCDirector.sharedDirector().popScene()
             CCDirector.sharedDirector().pushScene(self.scene)

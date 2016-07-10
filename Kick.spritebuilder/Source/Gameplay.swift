@@ -210,6 +210,7 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
     
     func pause(){
         audio.stopAllEffects()
+        OALSimpleAudio.sharedInstance().playEffect("Resource/button.wav")
         CCDirector.sharedDirector().pushScene(self.scene)
         let stop = CCBReader.loadAsScene("Stop")
         CCDirector.sharedDirector().presentScene(stop, withTransition: CCTransition(crossFadeWithDuration: 0.5))
@@ -300,10 +301,10 @@ class Gameplay: CCNode,CCPhysicsCollisionDelegate {
         for tmp_child in level.children{
             let child = tmp_child as! CCNode
             if (child.physicsBody.type==CCPhysicsBodyType.Dynamic||child.physicsBody.type==CCPhysicsBodyType.Static){
-                child.physicsBody.elasticity = 1.0
+                child.physicsBody.elasticity = 1.01
             }
         }
-        gamePhysicsNode.space.damping = 0.5
+        gamePhysicsNode.space.damping = 1.0
     }
     
     func gameOver(){

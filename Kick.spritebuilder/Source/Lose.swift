@@ -14,12 +14,14 @@ class Lose: CCNode {
     }
     func returnToLevelChoose(){
         OALSimpleAudio.sharedInstance().stopAllEffects()
+        OALSimpleAudio.sharedInstance().playEffect("Resource/button.wav")
         let trans = CCTransition(fadeWithDuration: 0.5)
         CCDirector.sharedDirector().popSceneWithTransition(trans)
     }
 
     func replay(){
         OALSimpleAudio.sharedInstance().stopAllEffects()
+        OALSimpleAudio.sharedInstance().playEffect("Resource/button.wav")
         let gameplayScene = CCBReader.loadAsScene("Gameplay")
         CCDirector.sharedDirector().presentScene(gameplayScene, withTransition: CCTransition(fadeWithDuration: 0.5))
     }
